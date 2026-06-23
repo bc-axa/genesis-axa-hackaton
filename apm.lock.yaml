@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-06-17T14:09:53.025562+00:00'
+generated_at: '2026-06-22T09:44:28.744593+00:00'
 apm_version: 0.20.0
 dependencies:
 - repo_url: DevExpGbb/genesis
@@ -69,8 +69,8 @@ dependencies:
   deployed_files:
   - .github/agents/architect.agent.md
   deployed_file_hashes:
-    .github/agents/architect.agent.md: sha256:de74154b914769a13b4dc594f998db0e745280f8890af1ca526f10b10d0ecc5a
-  content_hash: sha256:bdc7b315617afd469e35e2f6b6bcf6712df57298ab9b8a398877e2f744b8ce62
+    .github/agents/architect.agent.md: sha256:5afb7ce3a027e25b37237e246cc5165fa91999e22ae1c91cf1f38b6f2b0bb403
+  content_hash: sha256:238eface848c75d6b6d263f34d14e426b05af4e1ac14c890353709864803a3f1
 - repo_url: DevExpGbb/zava-agent-config
   host: github.com
   resolved_commit: 7a12679a9e1f55e06d16616ed0244b5fdeaad3da
@@ -83,7 +83,7 @@ dependencies:
   - .agents/skills/meeting-to-issue/SKILL.md
   deployed_file_hashes:
     .agents/skills/meeting-to-issue/SKILL.md: sha256:6b79d3bf93e42eeed5543adbd52566abf9f5b81d4bac3fc8f298eb8c39ee5a27
-  content_hash: sha256:5d7ac2f6095e67162b16fb92aa8200d247a68ff42dda7f8e52d844073eaa8863
+  content_hash: sha256:410d217054fe6b7772feb66bf2dd3672d2a96db31b63b4950c011c11c5c15862
 - repo_url: DevExpGbb/zava-agent-config
   host: github.com
   resolved_commit: 7a12679a9e1f55e06d16616ed0244b5fdeaad3da
@@ -96,7 +96,7 @@ dependencies:
   - .agents/skills/panel-review/SKILL.md
   deployed_file_hashes:
     .agents/skills/panel-review/SKILL.md: sha256:8e33b93b22e9f7eaa589d22012e220310f7897aa846936c9d5ea5eec04640b15
-  content_hash: sha256:9da1799dbef457f121865aef79dfcdc6efead654030f03047b7a62bf0c8af1d7
+  content_hash: sha256:5bd2bddd200fc078d30e7b4156f76b60ca7613465fe6b45c3729f7fe43827c9e
 - repo_url: DevExpGbb/zava-agent-config
   host: github.com
   resolved_commit: 7a12679a9e1f55e06d16616ed0244b5fdeaad3da
@@ -109,7 +109,37 @@ dependencies:
   - .github/instructions/docs-style-guide.instructions.md
   - .github/instructions/secure-coding-base.instructions.md
   deployed_file_hashes:
-    .github/agents/security.agent.md: sha256:8092bef9ff98c66251754d33e9b241f4f25293578b31e258cee88124c80590c1
-    .github/instructions/docs-style-guide.instructions.md: sha256:cad1b1161ef8d53e08038302b6c8cd14dbc03f75fa7ec267edf3d1f07824a739
-    .github/instructions/secure-coding-base.instructions.md: sha256:f0a32226b87082a4e4cad08a070e55c177e23e0ef728329973634c84c3a81d14
-  content_hash: sha256:10e2277dfb0a1e32bd833be73ba5c964c4b64334eb325a1b1a7338d4db0a6855
+    .github/agents/security.agent.md: sha256:d4e21f8f4c542433407dd3fb379aca3b1b0a61f9dca438ed2296cd46e246b092
+    .github/instructions/docs-style-guide.instructions.md: sha256:fddb50410971943302549ca50310df3b03147091cf13186ad81d55dbe6388ba7
+    .github/instructions/secure-coding-base.instructions.md: sha256:5e8f6a09fac3aa837313ae0af5f17f4a050ac9be53f1ac81ad6ed31d75df60ee
+  content_hash: sha256:2bc0b645982e933356d19eb82ce36013491515ef4abf38943ed0b9763d65c320
+local_deployed_files:
+- .agents/skills/framework-modernizer
+- .agents/skills/framework-modernizer/SKILL.md
+- .agents/skills/framework-modernizer/evals/README.md
+- .agents/skills/framework-modernizer/evals/evals.json
+- .agents/skills/framework-modernizer/evals/expected/findings.txt
+- .agents/skills/framework-modernizer/evals/fixtures/express4-app/package.json
+- .agents/skills/framework-modernizer/evals/fixtures/express4-app/server.js
+- .agents/skills/framework-modernizer/evals/run.js
+- .agents/skills/framework-modernizer/evals/triggers.json
+- .agents/skills/framework-modernizer/references/DESIGN.md
+- .agents/skills/framework-modernizer/references/classifier-rubric.md
+- .agents/skills/framework-modernizer/references/express-4-to-5-breaking-changes.md
+- .agents/skills/framework-modernizer/references/phased-plan-template.md
+- .agents/skills/my-skill
+- .agents/skills/my-skill/SKILL.md
+local_deployed_file_hashes:
+  .agents/skills/framework-modernizer/SKILL.md: sha256:60df2736d5758566232f001406c5ea7b9d6260606ee789469823c8087de5b800
+  .agents/skills/framework-modernizer/evals/README.md: sha256:4d64c1d9969b2526fb290396ab873be7bf2ca3635c16914390cf20fb8475021d
+  .agents/skills/framework-modernizer/evals/evals.json: sha256:487fe9bea22abc49fe0eef8d235b7571d6e5d21be2b9818ee372799d27f164d8
+  .agents/skills/framework-modernizer/evals/expected/findings.txt: sha256:a77dc7769816479af420e015fc256cbec6004da9542f087b89dbe79c2d90214f
+  .agents/skills/framework-modernizer/evals/fixtures/express4-app/package.json: sha256:b5412f218cecf320a02cede5b783b48c23907ffa231c1549c38fa924345ebb9a
+  .agents/skills/framework-modernizer/evals/fixtures/express4-app/server.js: sha256:8236a6baf2a1d0387649685f6340fff39539240283110d794839530eeb928033
+  .agents/skills/framework-modernizer/evals/run.js: sha256:b5db51664f8a292d88c23cee02a3c8a037c28360eae0252c905ec28c85e25f22
+  .agents/skills/framework-modernizer/evals/triggers.json: sha256:5eb5ff56416221209579281adcdd6ae37be7d8d1a913e0c5be83a411b9372971
+  .agents/skills/framework-modernizer/references/DESIGN.md: sha256:cfc85e90812240ce9f93918260f14a960857e67ef5160ab4d5f48fa8ee48580b
+  .agents/skills/framework-modernizer/references/classifier-rubric.md: sha256:0538096d985627699da3416537ecaecfbbb9c5b93d2196e332277a0e0bf215b3
+  .agents/skills/framework-modernizer/references/express-4-to-5-breaking-changes.md: sha256:c46cc1529b0fd09a3ac9ca8c2cf5ad8e52b9225ad8e60812648e125dc7acd565
+  .agents/skills/framework-modernizer/references/phased-plan-template.md: sha256:f4e6df41c8dde82002abe3c86c3844571e6b57dc0289944243c4e4a1cf08b04a
+  .agents/skills/my-skill/SKILL.md: sha256:c85123112cc9ac4d5b050c42dcdd894addd156b9c2e56d3bd614a1f546146e16
