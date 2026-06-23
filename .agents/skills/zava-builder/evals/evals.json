@@ -1,0 +1,83 @@
+{
+  "skill": "zava-builder",
+  "version": "1.0.0",
+  "content_evals": [
+    {
+      "id": "ce-01",
+      "description": "Feature brief -> branch + commits + PR",
+      "prompt": "Implement a new GET /health endpoint that returns { \"status\": \"ok\" } with HTTP 200. Add it to the existing Express router in zava-storefront.",
+      "expected_with_skill": [
+        "Creates a new git branch (feat/health-endpoint or similar)",
+        "Writes the endpoint code respecting the layered architecture from architecture.md",
+        "Adds a docstring per documentation.md TSDoc format",
+        "Runs npm run lint and npm test and confirms both pass before opening PR",
+        "Opens a PR with a body that follows assets/pr-template.md structure",
+        "PR body includes CI status section showing both checks green",
+        "Does not commit any hardcoded secrets or tokens"
+      ],
+      "expected_without_skill": [
+        "May suggest or write the code inline in the chat",
+        "Does NOT create a branch",
+        "Does NOT run npm run lint or npm test",
+        "Does NOT open a PR"
+      ]
+    },
+    {
+      "id": "ce-02",
+      "description": "Review findings -> fixes + PR update",
+      "prompt": "These review findings need to be addressed:\n1. POST /orders handler accepts user-supplied orderId directly in the SQL query string (SQL injection risk).\n2. The user email is logged in plain text in the error handler.\nPlease fix both and update the PR.",
+      "expected_with_skill": [
+        "Loads guidelines/security.md before touching code",
+        "Parameterizes the SQL query using a prepared statement (security.md §4)",
+        "Masks the email in the log output (security.md §6)",
+        "Commits with a fix-type commit message",
+        "Runs npm run lint and npm test before updating the PR",
+        "Updates the existing PR body with the changes made",
+        "Lists both findings as resolved in the PR description"
+      ],
+      "expected_without_skill": [
+        "May suggest fixes in prose",
+        "Does NOT commit changes to a branch",
+        "Does NOT run CI checks",
+        "Does NOT update a PR"
+      ]
+    }
+  ],
+  "trigger_evals": {
+    "description": "~20 queries split 60/40 train/val. Validation split is the ship gate: >=0.5 hit-rate on should-trigger AND <0.5 hit-rate on should-not-trigger.",
+    "train": {
+      "should_trigger": [
+        "Implement ticket ZAVA-42: add discount code field to checkout",
+        "Here are the review comments, please fix them and update the PR",
+        "Build the feature described in this brief: add pagination to the product listing API",
+        "Apply these code review findings to the branch and push",
+        "Create a pull request for this feature",
+        "Fix the issues flagged in the last PR review and push a new version",
+        "Implement these acceptance criteria: [paste of ACs]",
+        "My PM sent this brief, please implement it and open a PR",
+        "Take this work item and turn it into commits on a branch",
+        "These findings need addressing, open a PR when done",
+        "Push a branch with this change to zava-storefront and open a PR",
+        "Implement this feature: users should be able to save their cart"
+      ],
+      "should_not_trigger": [
+        "Review my branch against main and tell me what you think",
+        "Can you explain what this middleware does?",
+        "Write tests for this function using TDD"
+      ]
+    },
+    "val": {
+      "should_trigger": [
+        "Here's the ticket, go build it",
+        "Address the review feedback on this PR"
+      ],
+      "should_not_trigger": [
+        "What are our architecture guidelines?",
+        "Create a GitHub issue for this feature request",
+        "Refactor this module but don't open a PR yet",
+        "Run lint on my code and tell me what errors come up",
+        "Generate release notes for this sprint"
+      ]
+    }
+  }
+}
